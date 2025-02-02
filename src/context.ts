@@ -1,5 +1,4 @@
 import { db } from "./db";
-import type { CreateExpressContextOptions } from "@trpc/server/adapters/express";
 
 /**
  * CONTEXT
@@ -13,7 +12,7 @@ import type { CreateExpressContextOptions } from "@trpc/server/adapters/express"
  *
  * @see https://trpc.io/docs/server/context
  */
-export const createContext = ({ req, res }: CreateExpressContextOptions) => {
+export const createContext = () => {
   return {
     db,
   };
